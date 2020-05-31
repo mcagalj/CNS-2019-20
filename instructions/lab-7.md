@@ -102,7 +102,7 @@ Za tu svrhu pripremljena je jednostavna NodeJS skripta koju trebate pokrenuti iz
 
 4. (**Opcionalno**) U editoru otvorite `dummy.data.js` i proširite popis korisnika tako da dodate sebe (svoje ime, odgovarajuće korisničko ime i zaporku, ...) kao jednog od korisnika.
 
-5. Skripta `populate.db.js` koja će puniti bazu podacima treba se autenticirati na bazu. Za ovu svrhu ćemo koristiti prethodno kreiran korisnički račun `lab7` s ograničenim ovlastima. U tu svrhu, otvorite datoteku `.env` i popunite je s odgovarajućim korisničim informacijama kako slijedi:
+5. Skripta `populate.db.js` koja puni bazu podacima treba se autenticirati na bazu. Skripta će se autenticirati s prethodno kreiranim korisničkim računom `lab7`. U tu svrhu, otvorite datoteku `.env` i popunite je s odgovarajućim korisničkim informacijama kako slijedi:
 
    ```Bash
     MONGODB_ADDON_DB="bd8xzubzzn6t1ue"
@@ -120,7 +120,7 @@ Za tu svrhu pripremljena je jednostavna NodeJS skripta koju trebate pokrenuti iz
     # node -r dotenv/config ./utils/db/populate.db.js
     ```
 
-    U Robo 3T manageru osjvežite pregled podataka i uvjerite se da su dodane 4 kolekcije (_collections_): `chartpoints`, `permissions`, `roles`, `users`, zajedno s korisničkim podacima u kolekciji `users`.
+    U Robo 3T manageru osvježite pregled podataka i uvjerite se da su dodane 4 kolekcije (_collections_): `chartpoints`, `permissions`, `roles`, `users`, zajedno s korisničkim podacima u kolekciji `users`.
 
 #### Pokretanje i testiranje web aplikacije
 
