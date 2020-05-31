@@ -4,7 +4,7 @@
 
 U okviru laboratorijskih vježbi student će se upoznati s praktičnim aspektima postupka zaštite podataka na mreži primjenom kriptografskih mehanizama.
 
-Laboratorijske vježbe su praktičnog tipa (_hands-on_). Vježbe su djelomično inspirirane modelom _capture the flag_, gdje student prikuplja kredit rješavanjem odgovarajućih kriptografskih izazova (_challenge_). U okviru vježbi student treba otkriti način na koji može otključati/dekriptirati svoj _challenge_ (kratak tekst koji uključuje [Chuck Norrisa](http://www.nochucknorris.com)). 
+Laboratorijske vježbe su praktičnog tipa (_hands-on_). Vježbe su djelomično inspirirane modelom _capture the flag_, gdje student prikuplja kredit rješavanjem odgovarajućih kriptografskih izazova (_challenge_). U okviru vježbi student treba otkriti način na koji može otključati/dekriptirati svoj _challenge_ (kratak tekst koji uključuje [Chuck Norrisa](http://www.nochucknorris.com)).
 
 Student će dobiti pristup personaliziranom virtualnom serveru (REST API aplikacija pisana u [Express](https://expressjs.com) _framework_-u i koja se izvodi u odgovarajućem [Docker](https://www.docker.com) _container_-u). U interakciji sa osobnim serverom student će rješavati dane kriptografske izazove.
 
@@ -20,7 +20,7 @@ U ovom repozitoriju profesor će objavljivati upute, dijelove koda, konfiguracij
 - [Lab 4 - CTR mode and repeated counters](/instructions/lab-4.md)
 - [Lab 5 - Asymmetric crypto: RSA signatures and DH key exchange](/instructions/lab-5.md)
 - [Lab 6 - Securing end-2-end communication](/instructions/lab-6.md)
-- Lab 7 - Certificate authorities (CAs) and TLS protocol
+- [Lab 7 - Certificate authorities (CAs) and TLS protocol](/instructions/lab-7.md)
 - Lab 8 - SSH tunneling
   
 ### Dodatne upute

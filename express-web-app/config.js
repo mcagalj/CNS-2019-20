@@ -43,36 +43,38 @@ module.exports = {
   //-----------------------------
   // HTTPS SERVER CONFIG DATA
   //-----------------------------
-  HTTPS: {
-    port: process.env.HTTPS_PORT || 4430,
-    key:
-      process.env.SERVER_KEY ||
-      fs.readFileSync(
-        path.join(__dirname, "certs", "server", "server-key.pem")
-      ),
-    cert:
-      process.env.SERVER_CERT ||
-      fs.readFileSync(
-        path.join(__dirname, "certs", "server", "server-cert.pem")
-      ),
-    ca:
-      process.env.CA_CERT ||
-      fs.readFileSync(path.join(__dirname, "certs", "ca", "ca.pem")),
+  HTTPS: HTTPS
+    ? {
+        port: process.env.HTTPS_PORT || 4430,
+        key:
+          process.env.SERVER_KEY ||
+          fs.readFileSync(
+            path.join(__dirname, "certs", "server", "server-key.pem")
+          ),
+        cert:
+          process.env.SERVER_CERT ||
+          fs.readFileSync(
+            path.join(__dirname, "certs", "server", "server-cert.pem")
+          ),
+        ca:
+          process.env.CA_CERT ||
+          fs.readFileSync(path.join(__dirname, "certs", "ca", "ca.pem")),
 
-    // If true the server will request a certificate
-    // from clients that connect and attempt to verify that certificate.
-    requestCert: false,
+        // If true the server will request a certificate
+        // from clients that connect and attempt to verify that certificate.
+        requestCert: false,
 
-    // If true the server will reject any connection
-    // which is not authorized with the list of supplied CAs.
-    // This option only has an effect if requestCert is true.
-    // (https://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener)
-    rejectUnauthorized: false,
-    honorCipherOrder: true,
+        // If true the server will reject any connection
+        // which is not authorized with the list of supplied CAs.
+        // This option only has an effect if requestCert is true.
+        // (https://nodejs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener)
+        rejectUnauthorized: false,
+        honorCipherOrder: true,
 
-    ciphers:
-      "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AES:!aNULL:!MD5:!DSS",
-  },
+        ciphers:
+          "ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AES:!aNULL:!MD5:!DSS",
+      }
+    : null,
 
   //-----------------------------
   // PASSWORD HASHING CONFIG
