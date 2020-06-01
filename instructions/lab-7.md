@@ -68,7 +68,7 @@ U tom smislu u ovoj fazi ćemo kreirati korisnički račun za web aplikaciju koj
 
 1. U Robo 3T manageru otvorite tzv. `mongo shell` (desni klik na ime baze i klik na Open Shell).
 
-2. Kreirajte novog korisnika (npr., `lab7`) s `read/write` pravima na vašoj bazi unošenjem sljedeće naredbe u `mongo shell` i pristiskom na F5 ili Ctrl + Enter:
+2. Kreirajte novog korisnika (npr., `lab7`) s `read/write` pravima na vašoj bazi unošenjem sljedeće naredbe u `mongo shell` i pristiskom na F5 ili Ctrl + Enter (_prethodno prilagodite polja `user`, `pwd` i `db` prema vašim postavkama_):
 
     ```Bash
     db.createUser({
